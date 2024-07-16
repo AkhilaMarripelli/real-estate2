@@ -133,7 +133,7 @@ app.get('/allplots', async (req, res) => {
 // Creating endpoint for newListings data
 app.get('/newlistings', async (req, res) => {
     let plots = await Plot.find({});
-    let newCollection = plots.slice(1).slice(-8);
+    let newCollection = plots.slice(0).slice(-8);
     console.log('New Plots fetched');
     res.json(newCollection);  // Ensure this is sending a JSON response
 });
