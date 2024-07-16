@@ -37,7 +37,6 @@ const ShopContextProvider = (props) => {
     }, []);
 
     const addToCart = (itemId) => {
-        console.log('entered add to cart');
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         if (localStorage.getItem('auth-token')) {
             fetch('http://localhost:5000/addtocart', {

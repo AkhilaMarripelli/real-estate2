@@ -92,7 +92,7 @@ const AddPlot = () => {
           <label htmlFor="price">Price</label>
           <input value={plotDetails.price} onChange={changeHandler} type="text" id="price" placeholder='Type here' name='price' className='bg-transparent border-2 border-black rounded-lg p-2 w-full' />
 
-          <label htmlFor="plotImages" className='font-medium'>Plot Images</label>
+          <label htmlFor="plotImages" className='font-medium border-2 px-6 py-2 rounded-md'>Add Images</label>
           <input onChange={imageHandler} type="file" name='images' id='plotImages' multiple />
           {images.length > 0 && (
             <div>
